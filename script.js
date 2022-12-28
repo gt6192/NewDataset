@@ -15,9 +15,9 @@ function download(f)
         var link = document.createElement('a');
         link.download = fname;
         link.href = document.getElementById("canvas").toDataURL();
-        //link.click();
-        var a = document.getElementById("canvas").toDataURL();
-        alert(a);
+        link.click();
+        // var a = document.getElementById("canvas").toDataURL();
+        // alert(a);
     }
     catch{
         alert("Draw something!");
