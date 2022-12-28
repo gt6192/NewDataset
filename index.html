@@ -37,31 +37,9 @@
         </div>
 
         <script src="html2image.js"></script>
+        <script src="script.js"></script>
         <script>
-            function capture()
-            {
-                html2canvas(document.getElementById("draw"), {width:'300', height:'300'}).then(function(canvas) {
-                    var preview = document.getElementById("preview");
-                    preview.innerHTML="";
-                    preview.appendChild(canvas);
-                    canvas.setAttribute('id', 'canvas');
-                });
-            }
-            document.getElementById("cap_but").addEventListener("click", capture)
-
-            function download(f)
-            {
-                try{
-                    fname = f + ".png";
-                    var link = document.createElement('a');
-                    link.download = fname;
-                    link.href = document.getElementById("canvas").toDataURL()
-                    link.click();
-                }
-                catch{
-                    alert("Draw something!");
-                }
-            }
+            
         </script>
 
         <script src="app2.js"></script>
